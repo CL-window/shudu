@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sudoku</title>
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <script src="tongji.js"></script>
+    
+</head>
+
+<body>
+<h1 style="text-align: center">数独游戏</h1>
+<div id="container">
+
+  <a style="margin-left: 80%; font-size: 20px;" href="shudujieti.html">解题模式</a>
+
+  <div class="sudoku_wrap">
+    <ul id="sudoku" class="center">
+      <li x="0" y="0" style="border-left: 3px solid #000; border-top: 3px solid #000;"></li>
+      <li x="0" y="1" style="border-left: 1px solid #000; border-top: 3px solid #000;"></li>
+      <li x="0" y="2" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 3px solid #000;"></li>
+      <li x="0" y="3" style="border-left: 1px solid #000; border-top: 3px solid #000;"></li>
+      <li x="0" y="4" style="border-left: 1px solid #000; border-top: 3px solid #000;"></li>
+      <li x="0" y="5" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 3px solid #000;"></li>
+      <li x="0" y="6" style="border-left: 1px solid #000; border-top: 3px solid #000;"></li>
+      <li x="0" y="7" style="border-left: 1px solid #000; border-top: 3px solid #000;"></li>
+      <li x="0" y="8" style="border-left: 1px solid #000; border-right: 3px solid #000; border-top: 3px solid #000;"></li>
+
+      <li x="1" y="0" style="border-left: 3px solid #000; border-top: 1px solid #000;"></li>
+      <li x="1" y="1" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="1" y="2" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000;"></li>
+      <li x="1" y="3" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="1" y="4" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="1" y="5" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000;"></li>
+      <li x="1" y="6" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="1" y="7" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="1" y="8" style="border-left: 1px solid #000; border-right: 3px solid #000; border-top: 1px solid #000;"></li>
+
+      <li x="2" y="0" style="border-left: 3px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="2" y="1" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="2" y="2" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="2" y="3" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="2" y="4" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="2" y="5" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="2" y="6" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="2" y="7" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="2" y="8" style="border-left: 1px solid #000; border-right: 3px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+
+      <li x="3" y="0" style="border-left: 3px solid #000; border-top: 1px solid #000;"></li>
+      <li x="3" y="1" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="3" y="2" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000;"></li>
+      <li x="3" y="3" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="3" y="4" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="3" y="5" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000;"></li>
+      <li x="3" y="6" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="3" y="7" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="3" y="8" style="border-left: 1px solid #000; border-right: 3px solid #000; border-top: 1px solid #000;"></li>
+
+      <li x="4" y="0" style="border-left: 3px solid #000; border-top: 1px solid #000;"></li>
+      <li x="4" y="1" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="4" y="2" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000;"></li>
+      <li x="4" y="3" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="4" y="4" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="4" y="5" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000;"></li>
+      <li x="4" y="6" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="4" y="7" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="4" y="8" style="border-left: 1px solid #000; border-right: 3px solid #000; border-top: 1px solid #000;"></li>
+
+      <li x="5" y="0" style="border-left: 3px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="5" y="1" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="5" y="2" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="5" y="3" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="5" y="4" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="5" y="5" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="5" y="6" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="5" y="7" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+      <li x="5" y="8" style="border-left: 1px solid #000; border-right: 3px solid #000; border-top: 1px solid #000; border-bottom: 2px solid #000;"></li>
+
+      <li x="6" y="0" style="border-left: 3px solid #000; border-top: 1px solid #000;"></li>
+      <li x="6" y="1" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="6" y="2" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000;"></li>
+      <li x="6" y="3" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="6" y="4" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="6" y="5" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000;"></li>
+      <li x="6" y="6" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="6" y="7" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="6" y="8" style="border-left: 1px solid #000; border-right: 3px solid #000; border-top: 1px solid #000;"></li>
+
+      <li x="7" y="0" style="border-left: 3px solid #000; border-top: 1px solid #000;"></li>
+      <li x="7" y="1" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="7" y="2" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000;"></li>
+      <li x="7" y="3" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="7" y="4" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="7" y="5" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000;"></li>
+      <li x="7" y="6" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="7" y="7" style="border-left: 1px solid #000; border-top: 1px solid #000;"></li>
+      <li x="7" y="8" style="border-left: 1px solid #000; border-right: 3px solid #000; border-top: 1px solid #000;"></li>
+
+      <li x="8" y="0" style="border-left: 3px solid #000; border-top: 1px solid #000; border-bottom: 3px solid #000;"></li>
+      <li x="8" y="1" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 3px solid #000;"></li>
+      <li x="8" y="2" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000; border-bottom: 3px solid #000;"></li>
+      <li x="8" y="3" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 3px solid #000;"></li>
+      <li x="8" y="4" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 3px solid #000;"></li>
+      <li x="8" y="5" style="border-left: 1px solid #000; border-right: 2px solid #000; border-top: 1px solid #000; border-bottom: 3px solid #000;"></li>
+      <li x="8" y="6" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 3px solid #000;"></li>
+      <li x="8" y="7" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 3px solid #000;"></li>
+      <li x="8" y="8" style="border-left: 1px solid #000; border-right: 3px solid #000; border-top: 1px solid #000; border-bottom: 3px solid #000;"></li>
+
+    </ul>
+  </div>
+  <div class="sudu_container center-horizontal">
+	  <div class="card" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000;" onclick="onCardClick(1, this)">1</div>
+	  <div class="card" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000;" onclick="onCardClick(2, this)">2</div>
+	  <div class="card" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000;" onclick="onCardClick(3, this)">3</div>
+	  <div class="card" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000;" onclick="onCardClick(4, this)">4</div>
+	  <div class="card" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000;" onclick="onCardClick(5, this)">5</div>
+	  <div class="card" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000;" onclick="onCardClick(6, this)">6</div>
+	  <div class="card" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000;" onclick="onCardClick(7, this)">7</div>
+	  <div class="card" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000;" onclick="onCardClick(8, this)">8</div>
+	  <div class="card" style="border-left: 1px solid #000; border-top: 1px solid #000; border-bottom: 1px solid #000;" onclick="onCardClick(9, this)">9</div>
+	  <div class="card" style="border: 1px solid #000;" onclick="onCardClick(-1, this)">?</div>
+
+	  <div class="biaoji" onclick="onBiaoJiClick(this)">标记</div>
+	</div>
+  <div class="center-horizontal" style="width: fit-content;">
+    <input type="checkbox" name="checkInput" onchange="checkInputChange(this)">检查每一步操作
+  </div>
+
+  <p id="timer" style="text-align: center"></p>
+  
+  <div id="difficulty" class="check_wrap center-horizontal">
+    <input type="radio" name="difficulty" value="easy" onclick="easy()" checked>简单
+    <input type="radio" name="difficulty" value="hard" onclick="hard()">困难
+    <input type="radio" name="difficulty" value="disgust" onclick="disgust()">变态
+  </div>
+  <div class="button_wrap center-horizontal">
+    <button type="button" onclick="gameStart()">新游戏</button>
+    <button type="button" onclick="showAnswer()">看答案</button>
+  </div>
+
+  <script src="sudoku.js"></script>
+</div>
+
+<p style="padding-left: 10%; padding-right: 10%;">游戏说明：<br/>
+  1. 玩法：上面9x9的数独面板，下面是数字功能区域，先点击数独面板上需要填数字区域，再从下方的数字中选择合适的即可自动填入数独面板中<br/>
+2. 标记：标记不确定的位置，被标记的位置可以输入数字，有明显标记标识别, 可以通过点击“标记”来新增/移除标记，也可以通过重新选取数字取消标记<br/>
+3. ？： 输入不确定的位置，代替数字<br/>
+4. 检查每一步操作：每次操作时都会简单检查是否符合数独的要求，每一行，每一列，每一个小方块不可以有重复的数字，注意不是判断是否是正确答案<br/>
+5. 看答案：可以提示，注意答案可能不唯一<br/></p>
+
+<p style="padding-left: 10%; padding-right: 10%;">
+  &emsp;&emsp;数独（shù dú）是源自18世纪瑞士的一种数学游戏，后在美国发展、并在日本得以发扬光大的数学智力拼图游戏。是一种运用纸、笔进行演算的逻辑游戏。玩家需要根据9×9盘面上的已知数字，推理出所有剩余空格的数字，并满足每一行、每一列、每一个粗线宫（3*3）内的数字均含1-9，不重复 [1]  。
+  数独盘面是个九宫，每一宫又分为九个小格。在这八十一格中给出一定的已知数字和解题条件，利用逻辑和推理，在其他的空格上填入1-9的数字。使1-9每个数字在每一行、每一列和每一宫中都只出现一次，所以又称“九宫格”。<br/>
+  &emsp;&emsp;数独前身为“九宫格”，最早起源于中国。数千年前，我们的祖先就发明了洛书，其特点较之现在的数独更为复杂，要求纵向、横向、斜向上的三个数字之和等于15，而非简单的九个数字不能重复。儒家典籍《易经》中的“九宫图”也源于此，故称“洛书九宫图”。而“九宫”之名也因《易经》在中华文化发展史上的重要地位而保存、沿用至今。</p>
+</body>
+</html>

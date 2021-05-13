@@ -1,0 +1,112 @@
+#container {
+    display: block;
+  }
+  .sudoku_wrap {
+    width: inherit;
+    height: 600px;
+  }
+ 
+  .check_wrap {
+    width:fit-content;
+    height: 50px;
+  }
+  .center {
+    position: absolute;
+    margin:auto;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+  }
+  .center-horizontal {
+
+    margin-left:auto;
+    margin-right: auto;
+    left: 0;
+    right:0;
+  }
+  #sudoku {
+    width: 590px;
+    height: 540px;
+    list-style: none;
+    position: static;
+  }
+
+  #sudoku li {
+    width: 60px;
+    height: 60px;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+  }
+
+  #sudoku input {
+    width: 60px;
+    height: 60px;
+    border: 0px;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+  }
+
+  .sudu_container {
+    width:fit-content;
+    height: 80px;
+  }
+
+  .card {
+    width: 60px;
+    height: 60px;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .touchhover{background-color: #dad8d8;}
+
+  .active{
+    background-color: #adadad;
+  }
+  .cur_edit{
+    background-color: #dfdfdf;
+  }
+  .has_edit{
+    background-color: #eeeeee;
+  }
+
+  .cur_tag {
+    color: #ff0000;
+  }
+
+  .biaoji {
+    width: fit-content;
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #000; 
+    margin-left: 10px;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .button_wrap {
+    width: fit-content;
+    height: 60px;
+  }
+
+  button {
+    width:fit-content;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
